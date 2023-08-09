@@ -1,0 +1,223 @@
+@import '../scss/colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	// scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: $pure-black;
+}
+
+.wrapper {
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	scroll-snap-align: start;
+
+	&__text {
+		padding: 2rem;
+		height: 60vh;
+		background-color: $pure-black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $pure-white;
+
+		letter-spacing: 1px;
+
+		h3 {
+			font-size: 1.8rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.underline {
+			width: 8rem;
+			border-bottom: 2px solid $pure-white;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+			font-size: 1rem;
+			text-align: justify;
+		}
+
+		button {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1rem;
+			padding: 0.5rem 1rem;
+			color: $pure-white;
+			border: 1px solid $pure-white;
+			background: none;
+			text-transform: uppercase;
+			border-radius: 2rem;
+			font-weight: 600;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		button:hover {
+			cursor: pointer;
+			background-color: $pure-white;
+			color: $pure-black;
+		}
+	}
+
+	&__img {
+		height: 40vh;
+		background-size: cover;
+	}
+}
+
+.img-plain-roof {
+	background-image: url('../img/dron/AGH\ HALA\ \(1\).jpeg');
+}
+
+.img-homes-buildings {
+	background-image: url('../img/dron/Mała\ Góra\ mieszkaniówka\ \(1\).jpeg');
+}
+
+.img-services {
+	background-image: url('../img/dron/Aleksandry.jpeg');
+}
+
+.img-industry {
+	background-image: url('../img/dron/Pszczelna\ mieszkaniówka.jpeg');
+}
+
+.show {
+	opacity: 1;
+	transition: all .5s;
+	transform: translateX(0);
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.hidden:nth-child(odd) {   //nieparzyste
+	transform: translateX(-100px);
+}
+
+.hidden:nth-child(even) {
+	transform: translateX(100px)
+}
+
+@media (min-width: 480px) {
+	.container {
+		&__text {
+			h3 {
+				font-size: 2.2rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+
+			button {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+@media (min-width: 576px) {
+	.container {
+		&__text {
+			height: 50vh;
+
+			.underline {
+				margin-bottom: 1.5rem;
+			}
+			button {
+				margin-top: 1rem;
+			}
+		}
+		&__img {
+			height: 50vh;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		&__text {
+			width: 35vw;
+			height: 100vh;
+
+			&-right {
+			    padding-right: 1rem;
+			}
+
+			h3 {
+				font-size: 2.5rem;
+				margin-bottom: 1.5rem;
+			}
+			.underline {
+				margin-bottom: 1.5rem;
+			}
+			button {
+				margin-top: 1rem;
+			}
+		}
+
+		&__img {
+			width: 65vw;
+			height: 100vh;
+			background-size: cover;
+		}
+	}
+}
+
+
+
+@media (min-width: 992px) {
+	.container {
+		&__text {
+			p {
+				font-size: 1.4rem;
+			}
+
+			button {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		&__text {
+			width: 30%;
+			height: 100%;
+		}
+
+		&__img {
+			width: 70%;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,372 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333333;
+	width: 100vw;
+	height: 100vh;
+}
+
+.spinner-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	background-color: $pure-black;
+	transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1), opacity 1s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+
+.spinner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 8rem;
+	// margin: 100px auto 0;
+	text-align: center;
+	opacity: 1;
+
+	// transition: opacity 1s, height 1s;
+}
+
+.spinner-hidden {
+	opacity: 0;
+	height: 0;
+}
+
+.spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: $pure-white;
+
+	border-radius: 100%;
+	display: flex;
+	flex-direction: column;
+
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+.wrapper {
+	background-size: cover;
+	transition: background-image 1.5s;
+	background-repeat: no-repeat;
+	
+}
+
+.image1 {
+	background-image: url('../img/dron/Pawia\ \ \(7\).jpeg');
+}
+
+.image2 {
+	background-image: url('../img/dron/Trasa\ Łagiewnicka\ biurowiec.jpeg');
+}
+
+.image3 {
+	background-image: url('../img/dron/sw\ jacka\ dom\ modlitwy.jpeg');
+}
+
+.image4 {
+	background-image: url('../img/dron/Robota\ 1\ \(2\).jpeg');
+}
+
+.image5 {
+	background-image: url('../img/dron/Robota\ 1\ \(6\).jpeg');
+}
+
+.burger-btn {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+	outline: none;
+
+	&--active {
+		color: #000;
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 2rem;
+		height: 1rem;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		height: 3px;
+		content: '';
+		background-color: $pure-white;
+		// transition: all 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
+		transition: all 0.15s linear;
+	}
+	&__bars {
+		&::after {
+			top: 0.6rem;
+		}
+
+		&::before {
+			top: 1.2rem;
+		}
+	}
+
+	// &__bars--active,
+	// &__bars--active::before,
+	// &__bars--active::after {
+	// 	background-color: $pure-black;
+	// }
+
+	&__bars--active {
+		top: 0.6rem;
+		transform: rotate(45deg);
+		background-color: $pure-black;
+	}
+	&__bars--active::before {
+		top: 0;
+		transform: rotate(90deg);
+		background-color: $pure-black;
+	}
+	&__bars--active::after {
+		display: none;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	&__container {
+		transform: rotate(-90deg);
+
+		ul {
+			list-style: none;
+			position: relative;
+			right: 4rem;
+		}
+
+		li {
+			font-size: 2.8rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: $pure-white;
+			// color: $pure-black;
+			letter-spacing: 2px;
+			border-bottom: 1px solid $pure-white;
+			border-right: 1px solid $pure-white;
+			width: 90vh;
+			height: 20vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color 0.3s;
+		}
+
+		li:last-child {
+			border-bottom: none;
+		}
+
+		//SHADOW HOVER + BIAŁA CZCIONKA
+		li:hover {
+			cursor: pointer;
+			// background-color: rgba(0, 0, 0, 0.7);
+			background-color: $pure-black;
+			color: $pure-white;
+			// mix-blend-mode: multiply;
+		}
+
+		// CZARNY HOVER + BIAŁA CZCIONKA
+		// li:hover {
+		// 	cursor: pointer;
+		// 	background-color: $pure-black;
+		// 	color: $pure-white;
+		// }
+
+		// CZARNY HOVER + BIAŁA CZCIONKA
+		// li:hover {
+		// 	cursor: pointer;
+		// 	background-color: $pure-white;
+		// 	color: $pure-black;
+		// }
+
+		a {
+			padding-left: 2rem;
+
+			// padding-left: 10rem;
+			// display: flex;
+			// align-items: center;
+
+			left: 10rem;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			color: $pure-white;
+			// background-color: red;
+		}
+	}
+}
+
+.burger-nav {
+	padding: 2rem;
+	background-color: $pure-white;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	right: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transform: translateX(100%);
+	transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+	}
+
+	a {
+		margin: 0.5rem;
+		padding: 0.5rem;
+		font-size: 1.4rem;
+		text-decoration: none;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		font-weight: bold;
+	}
+}
+
+@media (min-width: 480px) {
+	.nav {
+		&__container {
+			ul {
+				right: 0;
+			}
+
+			li {
+				font-size: 3.3rem;
+				width: 100vh;
+				border-right: none;
+			}
+		}
+	}
+}
+@media (min-width: 576px) {
+	.nav {
+		&__container {
+			li {
+				font-size: 4rem;
+			}
+		}
+	}
+	.burger-nav {
+		width: 40vw;
+
+		a {
+			margin: 1rem;
+			padding: 1rem;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__container {
+			li {
+				font-size: 5rem;
+			}
+		}
+	}
+	.burger-nav {
+		a {
+			margin: 1rem;
+			padding: 1rem;
+			font-size: 2.2rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+	.burger-nav {
+		width: 20vw;
+	}
+}
