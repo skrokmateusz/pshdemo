@@ -20,13 +20,15 @@ body {
 }
 
 .spinner-container {
+  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
+  z-index: 10;
   justify-content: center;
   align-items: center;
   background-color: #000000;
-  transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1), opacity 1s cubic-bezier(0.65, 0.05, 0.35, 1);
+  transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1);
 }
 
 .spinner {
@@ -38,9 +40,12 @@ body {
   opacity: 1;
 }
 
-.spinner-hidden {
-  opacity: 0;
+.spinner-container-hidden {
   height: 0;
+}
+
+.spinner-hidden {
+  display: none;
 }
 
 .spinner > div {
@@ -94,6 +99,22 @@ body {
   background-image: url("../img/dron/Robota 1 (6).jpeg");
 }
 
+.logo-nav {
+  width: 100px;
+  height: 130px;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background-size: cover;
+  background-repeat: none;
+  overflow: auto;
+  background-image: url("../img/logos/BT.svg");
+}
+
+.logo-nav {
+  z-index: 1000000000;
+}
+
 .burger-btn {
   position: fixed;
   top: 2rem;
@@ -102,7 +123,7 @@ body {
   background: none;
   border: 1px solid transparent;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 9;
   outline: none;
 }
 .burger-btn--active {

@@ -52,17 +52,15 @@ const hoverOnLiItem = e => {
 		imgChanger = null
 	}
 	const liItem = e.target.closest('li')
-	// liItem.style.backgroundColor = 'white'
 	imgElement.classList.add(`image${liItem.id}`)
 	isInitial = false
 }
 
 const pageLoaderHandler = () => {
-	const spinner = document.querySelector('.spinner-container')
+	const spinnerContainer = document.querySelector('.spinner-container')
+	const spinner = document.querySelector('.spinner')
+	spinnerContainer.classList.add('spinner-container-hidden')
 	spinner.classList.add('spinner-hidden')
-	// spinner.addEventListener('transitionend', () => {
-	// 	document.body.removeChild('.spinner-container')
-	// })
 }
 
 window.addEventListener('load', pageLoaderHandler)

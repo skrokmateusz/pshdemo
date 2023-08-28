@@ -10,12 +10,89 @@
 
 html {
 	font-size: 62.5%;
-	// scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: $pure-black;
+}
+
+.spinner-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+	background-color: $pure-black;
+	transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+
+.spinner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 8rem;
+
+	text-align: center;
+	opacity: 1;
+	// transition: display 1s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+
+.spinner-container-hidden {
+	height: 0;
+}
+
+.spinner-hidden {
+	display: none;
+}
+
+.spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: $pure-white;
+
+	border-radius: 100%;
+	display: flex;
+	flex-direction: column;
+
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 
 .wrapper {
@@ -62,6 +139,12 @@ body {
 			text-align: justify;
 		}
 
+		ul {
+			margin-bottom: 1.5rem;
+			padding-left: 2rem;
+			font-size: 1rem;
+		}
+
 		button {
 			font-family: 'Montserrat', sans-serif;
 			font-size: 1rem;
@@ -104,9 +187,31 @@ body {
 	background-image: url('../img/dron/Pszczelna\ mieszkaniówka.jpeg');
 }
 
+.img-service-1 {
+	background-image: url('../img/dron/Pawia\ \ \(2\).jpeg');
+}
+
+.img-service-2 {
+	background-image: url('../img/dron/Pod\ Fortem\ mieszkaniówka\ \(2\).jpeg');
+}
+
+.img-renovation-1 {
+	background-image: url('../img/IMG_1674.jpg');
+}
+.img-renovation-2 {
+	background-image: url('../img/IMG_7110.JPG');
+
+}
+.img-renovation-3 {
+	background-image: url('../img/dron/Robota\ 1\ \(6\).jpeg');
+}
+.img-renovation-4 {
+	background-image: url('../img/dron/AGH\ HALA\ \(2\).jpeg');
+}
+
 .show {
 	opacity: 1;
-	transition: all .5s;
+	transition: all 0.5s;
 	transform: translateX(0);
 }
 
@@ -114,12 +219,13 @@ body {
 	opacity: 0;
 }
 
-.hidden:nth-child(odd) {   //nieparzyste
+.hidden:nth-child(odd) {
+	//nieparzyste
 	transform: translateX(-100px);
 }
 
 .hidden:nth-child(even) {
-	transform: translateX(100px)
+	transform: translateX(100px);
 }
 
 @media (min-width: 480px) {
@@ -130,6 +236,10 @@ body {
 			}
 
 			p {
+				font-size: 1.2rem;
+			}
+
+			ul {
 				font-size: 1.2rem;
 			}
 
@@ -169,7 +279,7 @@ body {
 			height: 100vh;
 
 			&-right {
-			    padding-right: 1rem;
+				padding-right: 1rem;
 			}
 
 			h3 {
@@ -192,12 +302,14 @@ body {
 	}
 }
 
-
-
 @media (min-width: 992px) {
 	.container {
 		&__text {
 			p {
+				font-size: 1.4rem;
+			}
+
+			ul {
 				font-size: 1.4rem;
 			}
 
