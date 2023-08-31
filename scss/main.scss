@@ -105,41 +105,43 @@ body {
 }
 
 .image1 {
-	background-image: url('../img/dron/Pawia\ \ \(7\).jpeg');
+	// background-image: url('../img/mainPage/Pawia\ \ \(7\).jpeg');
+	background-image: url('../img/mainPage/Pawia-_7_.avif');
 }
 
 .image2 {
-	background-image: url('../img/dron/Trasa\ Łagiewnicka\ biurowiec.jpeg');
+	// background-image: url('../img/mainPage/Trasa\ Łagiewnicka\ biurowiec.jpeg');
+	background-image: url('../img/mainPage/Trasa-Łagiewnicka-biurowiec.avif');
 }
 
 .image3 {
-	background-image: url('../img/dron/sw\ jacka\ dom\ modlitwy.jpeg');
+	// background-image: url('../img/mainPage/sw\ jacka\ dom\ modlitwy.jpeg');
+	background-image: url('../img/mainPage/sw-jacka-dom-modlitwy.avif');
 }
 
 .image4 {
-	background-image: url('../img/dron/Robota\ 1\ \(2\).jpeg');
+	// background-image: url('../img/mainPage/Robota\ 1\ \(2\).jpeg');
+	background-image: url('../img/mainPage/Robota-1-_2_.avif');
 }
 
 .image5 {
-	background-image: url('../img/dron/Robota\ 1\ \(6\).jpeg');
+	// background-image: url('../img/mainPage/Robota\ 1\ \(6\).jpeg');
+	background-image: url('../img/mainPage/Robota-1-_6_.avif');
 }
 
 .logo-nav {
-	width: 100px;
-	height: 130px;
+	// width: 100px;
+	// height: 130px;
 	position: fixed;
-	top: 2rem;
-	left: 2rem;
-
+	// top: 2rem;
+	// left: 2rem;
+	top: 0;
+	left: 0;
 	background-size: cover;
 	background-repeat: none;
 	overflow: auto;
-	background-image: url('../img/logos/BT.svg');
-
-}
-
-.logo-nav {
-z-index: 1000000000;
+	// background-image: url('../img/logos/BT.svg');
+	z-index: 1000000000;
 }
 
 .burger-btn {
