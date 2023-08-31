@@ -18,6 +18,8 @@ body {
 	background-color: #333333;
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
+
 }
 
 .spinner-container {
@@ -103,18 +105,22 @@ body {
 .image3,
 .image4,
 .image5 {
+	// max-width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	// height: auto;
+	
 	// background-size: cover;
+	
 	// background-repeat: no-repeat;
 	position: absolute;
 	left: 0;
 	// min-width: 100vw;
 	// min-height: auto;
 	opacity: 0;
-	transition: opacity ease 1s;
-}
-
-.image1 {
-	opacity: 1;
+	transition: opacity ease .5s;
 }
 
 .visible {
