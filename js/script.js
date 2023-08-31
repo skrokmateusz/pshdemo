@@ -56,10 +56,8 @@ const lostHoverOnLiItem = e => {
 	if (e.target) {
 		const changeImageHandler = () => {
 			const imageOnLostHover = document.querySelector(`.image${indexOfCurrentImage}`);
-			console.log(imageOnLostHover);
 			imageOnLostHover.classList.remove('visible');
 			index = indexOfCurrentImage;
-			console.log(index, 'index');
 			indexOfCurrentImage > 4 ? (indexOfCurrentImage = 1) : indexOfCurrentImage++;
 			const currentImage = document.querySelector(`.image${indexOfCurrentImage}`);
 			currentImage.classList.add('visible');

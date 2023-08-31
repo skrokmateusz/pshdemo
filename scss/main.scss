@@ -18,7 +18,7 @@ body {
 	background-color: #333333;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 
 }
 
@@ -100,27 +100,35 @@ body {
 	}
 }
 
-.image1,
-.image2,
-.image3,
-.image4,
-.image5 {
-	// max-width: 100%;
-	min-height: 100%;
-	min-width: 100%;
-	max-width: 100%;
-	max-height: 100%;
-	// height: auto;
-	
-	// background-size: cover;
-	
-	// background-repeat: no-repeat;
+.image {
 	position: absolute;
-	left: 0;
-	// min-width: 100vw;
-	// min-height: auto;
+	left: 0;top: 0;
 	opacity: 0;
-	transition: opacity ease .5s;
+	width: 100%;
+	height: 100%;
+	transition: opacity ease 1s;
+	background-size: cover;
+	background-position: center;
+}
+
+.image1 {
+	background-image: url('../img/low/Pawia\ \ \(7\)_1_11zon.jpeg');
+}
+
+.image2 {
+	background-image: url('../img/low/Trasa\ Łagiewnicka\ biurowiec_5.jpeg');
+}
+
+.image3 {
+	background-image: url('../img/low/sw\ jacka\ dom\ modlitwy_4_11zon.jpeg');
+}
+
+.image4 {
+	background-image: url('../img/low/Robota\ 1\ \(2\)_2_11zon.jpeg');
+}
+
+.image5 {
+	background-image: url('../img/low/Robota\ 1\ \(6\)_3_11zon.jpeg');
 }
 
 .visible {
@@ -132,38 +140,8 @@ body {
 	background-repeat: no-repeat;
 	max-width: 100%;
 	max-height: 100%;
+	overflow: hidden;
 }
-
-// .image1 {
-// 	// background-image: url('../img/mainPage/Pawia\ \ \(7\).jpeg');
-// 	background-image: url('../img/mainPage/Pawia-_7_.avif');
-
-// }
-
-// .image2 {
-// 	// background-image: url('../img/mainPage/Trasa\ Łagiewnicka\ biurowiec.jpeg');
-// 	background-image: url('../img/mainPage/Trasa-Łagiewnicka-biurowiec.avif');
-// 	// background-image: url('../img/mainPage/computer-2846160_1280.avif');
-// 	// background-image: url('../img/low/lowlow/Trasa\ Łagiewnicka\ biurowiec_5_11.jpeg');
-// }
-
-// .image3 {
-// 	// background-image: url('../img/mainPage/sw\ jacka\ dom\ modlitwy.jpeg');
-// 	background-image: url('../img/mainPage/sw-jacka-dom-modlitwy.avif');
-// 	// background-image: url('../img/low/lowlow/sw\ jacka\ dom\ modlitwy_4_11zon_10_11zon.jpeg');
-
-// }
-
-// .image4 {
-// 	// background-image: url('../img/mainPage/Robota\ 1\ \(2\).jpeg');
-// 	background-image: url('../img/mainPage/Robota-1-_2_.avif');
-// 	// background-image: url('../img/low/lowlow/Robota\ 1\ \(2\)_2_11zon_8_11zon.jpeg');
-// }
-
-// .image5 {
-// 	// background-image: url('../img/mainPage/Robota\ 1\ \(6\).jpeg');
-// 	background-image: url('../img/mainPage/Robota-1-_6_.avif');
-// }
 
 .logo-nav {
 	// width: 100px;
@@ -316,7 +294,7 @@ body {
 		// }
 
 		a {
-			padding-left: 2rem;
+			padding-left: 5rem;
 
 			// padding-left: 10rem;
 			// display: flex;
