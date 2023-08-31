@@ -80,19 +80,19 @@ body {
 }
 
 .image1 {
-  background-image: url("../img/mainPage/Pawia-_7_.avif");
+  background-image: url("../img/low/lowlow/Pawia  (7)_1_11zon_7_11zon.jpeg");
 }
 
 .image2 {
-  background-image: url("../img/mainPage/Trasa-Łagiewnicka-biurowiec.avif");
+  background-image: url("../img/low/lowlow/Trasa Łagiewnicka biurowiec_5_11.jpeg");
 }
 
 .image3 {
-  background-image: url("../img/mainPage/sw-jacka-dom-modlitwy.avif");
+  background-image: url("../img/low/lowlow/sw jacka dom modlitwy_4_11zon_10_11zon.jpeg");
 }
 
 .image4 {
-  background-image: url("../img/mainPage/Robota-1-_2_.avif");
+  background-image: url("../img/low/lowlow/Robota 1 (2)_2_11zon_8_11zon.jpeg");
 }
 
 .image5 {
@@ -106,7 +106,6 @@ body {
   background-size: cover;
   background-repeat: none;
   overflow: auto;
-  z-index: 1000000000;
 }
 
 .burger-btn {
@@ -117,7 +116,7 @@ body {
   background: none;
   border: 1px solid transparent;
   cursor: pointer;
-  z-index: 9;
+  z-index: 11;
   outline: none;
 }
 .burger-btn--active {
