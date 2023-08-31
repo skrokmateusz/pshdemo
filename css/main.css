@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -73,30 +72,30 @@ body {
     transform: scale(1);
   }
 }
-.wrapper {
-  background-size: cover;
-  transition: background-image 1.5s;
-  background-repeat: no-repeat;
+.image1,
+.image2,
+.image3,
+.image4,
+.image5 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity ease 1s;
 }
 
 .image1 {
-  background-image: url("../img/low/lowlow/Pawia  (7)_1_11zon_7_11zon.jpeg");
+  opacity: 1;
 }
 
-.image2 {
-  background-image: url("../img/low/lowlow/Trasa Łagiewnicka biurowiec_5_11.jpeg");
+.visible {
+  opacity: 1;
 }
 
-.image3 {
-  background-image: url("../img/low/lowlow/sw jacka dom modlitwy_4_11zon_10_11zon.jpeg");
-}
-
-.image4 {
-  background-image: url("../img/low/lowlow/Robota 1 (2)_2_11zon_8_11zon.jpeg");
-}
-
-.image5 {
-  background-image: url("../img/mainPage/Robota-1-_6_.avif");
+.wrapper {
+  transition: background-image 1.5s;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .logo-nav {
