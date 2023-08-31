@@ -10,6 +10,17 @@ const navigationHandler = () => {
 
 // const images = ["url('../img/358.JPG')", '../img/IMG_1674.jpg', '../img/IMG_1866.JPG', '../img/IMG_6807.JPG', '../img/IMG_7110.JPG']
 
+imgElement.classList.add(`image2`)
+imgElement.classList.remove(`image2`)
+imgElement.classList.add(`image3`)
+imgElement.classList.remove(`image3`)
+imgElement.classList.add(`image4`)
+imgElement.classList.remove(`image4`)
+imgElement.classList.add(`image5`)
+imgElement.classList.remove(`image5`)
+
+
+
 imgElement.classList.add(`image1`)
 let index = 1
 let isInitial = true
