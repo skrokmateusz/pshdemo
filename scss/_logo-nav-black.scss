@@ -1,0 +1,27 @@
+
+
+.logo-nav {
+	
+	z-index: 11;
+	width: 8rem;
+	height: 8rem;
+	background-image: url('../img/logos/BT.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@media (min-width: 576px) {
+	.logo-nav {
+		width: 15rem;
+		height: 15rem;
+	}
+
+}
+
+@media (min-width: 768px) {
+	.logo-nav {
+		width: 20rem;
+		height: 20rem;
+	}
+}

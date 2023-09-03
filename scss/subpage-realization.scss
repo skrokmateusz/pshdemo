@@ -18,7 +18,7 @@
 
 	&__text {
 		padding: 2rem;
-		height: 60vh;
+		height: 30vh;
 		background-color: $pure-black;
 		display: flex;
 		align-items: center;
@@ -43,6 +43,7 @@
 		p {
 			margin-bottom: 1.5rem;
 			font-size: 1rem;
+			text-align: justify;
 		}
 
 		ul {
@@ -72,46 +73,18 @@
 	}
 
 	&__img {
-		height: 40vh;
+		height: 70vh;
 		background-size: cover;
+        background-position: center;
 	}
 }
 
-.img-plain-roof {
-	background-image: url('../img/low/AGH\ HALA\ \(1\)_1_11zon.jpeg');
+.img-realization-1 {
+	background-image: url('../img/low/16\ realizacje_10_11zon.jpeg');
 }
 
-.img-homes-buildings {
-	background-image: url('../img/low/Mała\ Góra\ mieszkaniówka\ \(1\)_1.jpeg');
-}
-
-.img-services {
-	background-image: url('../img/low/Uj\ boisko_5_11zon.jpeg');
-}
-
-.img-industry {
-	background-image: url('../img/low/9\ b\ przemyslowe_3_11zon.jpg');
-}
-
-.img-service-1 {
-	background-image: url('../img/low/10\ serwis_4_11zon.jpg');
-}
-
-.img-service-2 {
-	background-image: url('../img/low/11\ serwis_5_11zon.jpg');
-}
-
-.img-renovation-1 {
-	background-image: url('../img/low/12\ remont_6_11zon.jpeg');
-}
-.img-renovation-2 {
-	background-image: url('../img/low/13\ remont_7_11zon.jpg');
-}
-.img-renovation-3 {
-	background-image: url('../img/low/14\ remont_8_11zon.jpg');
-}
-.img-renovation-4 {
-	background-image: url('../img/low/15\ remont_9_11zon.jpeg');
+.img-realization-2 {
+	background-image: url('../img/low/17\ realizacje_11_11zon.jpeg');
 }
 
 .show {
@@ -156,7 +129,7 @@
 @media (min-width: 576px) {
 	.container {
 		&__text {
-			height: 50vh;
+			height: 30vh;
 
 			.underline {
 				margin-bottom: 1.5rem;
@@ -166,7 +139,7 @@
 			}
 		}
 		&__img {
-			height: 50vh;
+			height: 70vh;
 		}
 	}
 }
@@ -176,12 +149,12 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		align-items: center;
+
 
 		&__text {
 			width: 35vw;
-			height: 100vh;
-
+			height: 100vh; 
+        
 			&-right {
 				padding-right: 1rem;
 			}
@@ -204,6 +177,10 @@
 			background-size: cover;
 		}
 	}
+
+    .container:last-child {
+        flex-direction: row-reverse;
+    }
 }
 
 @media (min-width: 992px) {

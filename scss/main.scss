@@ -1,108 +1,14 @@
-@import './colors';
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
-}
-
-body {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #333333;
-	width: 100vw;
-	height: 100vh;
-	// overflow: hidden;
-
-}
-
-.spinner-container {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	z-index: 10;
-	justify-content: center;
-	align-items: center;
-	background-color: $pure-black;
-	transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1);
-}
-
-.spinner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 8rem;
-
-	text-align: center;
-	opacity: 1;
-	// transition: display 1s cubic-bezier(0.65, 0.05, 0.35, 1);
-}
-
-.spinner-container-hidden {
-	height: 0;
-}
-
-.spinner-hidden {
-	display: none;
-}
-
-.spinner > div {
-	width: 18px;
-	height: 18px;
-	background-color: $pure-white;
-
-	border-radius: 100%;
-	display: flex;
-	flex-direction: column;
-
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-	}
-	40% {
-		-webkit-transform: scale(1);
-	}
-}
-
-@keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
-	40% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-}
+@use './reset' as *;
+@use './colors' as *;
+@use './spinner' as *;
+@use './burger-button-white' as *;
+@use './burger-nav' as *;
+@use './logo-nav-white' as *;
 
 .image {
 	position: absolute;
-	left: 0;top: 0;
+	left: 0;
+	top: 0;
 	opacity: 0;
 	width: 100%;
 	height: 100%;
@@ -116,7 +22,7 @@ body {
 }
 
 .image2 {
-	background-image: url('../img/low/Trasa\ Łagiewnicka\ biurowiec_5.jpeg');
+	background-image: url('../img/low/2\ Serwis_1_11zon.jpg');
 }
 
 .image3 {
@@ -124,11 +30,11 @@ body {
 }
 
 .image4 {
-	background-image: url('../img/low/Robota\ 1\ \(2\)_2_11zon.jpeg');
+	background-image: url('../img/low/4\ realizacje_2_11zon.jpeg');
 }
 
 .image5 {
-	background-image: url('../img/low/Robota\ 1\ \(6\)_3_11zon.jpeg');
+	background-image: url('../img/low/Trasa\ Łagiewnicka\ biurowiec_5.jpeg');
 }
 
 .visible {
@@ -141,97 +47,6 @@ body {
 	max-width: 100%;
 	max-height: 100%;
 	overflow: hidden;
-}
-
-.logo-nav {
-	// width: 100px;
-	// height: 130px;
-	position: fixed;
-	// top: 2rem;
-	// left: 2rem;
-	top: 0;
-	left: 0;
-	background-size: cover;
-	background-repeat: none;
-	overflow: auto;
-	// background-image: url('../img/logos/BT.svg');
-}
-
-.burger-btn {
-	position: fixed;
-	top: 2rem;
-	right: 2rem;
-	padding: 1em;
-	background: none;
-	border: 1px solid transparent;
-	cursor: pointer;
-	z-index: 11;
-	outline: none;
-
-	&--active {
-		color: #000;
-	}
-
-	&:focus {
-		outline: none;
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-radius: 8px;
-	}
-
-	&:hover {
-		.burger-btn__bars::after,
-		.burger-btn__bars::before {
-			width: 100%;
-		}
-	}
-
-	&__box {
-		position: relative;
-		width: 2rem;
-		height: 1rem;
-	}
-
-	&__bars,
-	&__bars::after,
-	&__bars::before {
-		width: 100%;
-		position: absolute;
-		right: 0;
-		height: 3px;
-		content: '';
-		background-color: $pure-white;
-		// transition: all 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
-		transition: all 0.15s linear;
-	}
-	&__bars {
-		&::after {
-			top: 0.6rem;
-		}
-
-		&::before {
-			top: 1.2rem;
-		}
-	}
-
-	// &__bars--active,
-	// &__bars--active::before,
-	// &__bars--active::after {
-	// 	background-color: $pure-black;
-	// }
-
-	&__bars--active {
-		top: 0.6rem;
-		transform: rotate(45deg);
-		background-color: $pure-black;
-	}
-	&__bars--active::before {
-		top: 0;
-		transform: rotate(90deg);
-		background-color: $pure-black;
-	}
-	&__bars--active::after {
-		display: none;
-	}
 }
 
 .nav {
@@ -254,7 +69,6 @@ body {
 			font-weight: 900;
 			text-transform: uppercase;
 			color: $pure-white;
-			// color: $pure-black;
 			letter-spacing: 2px;
 			border-bottom: 1px solid $pure-white;
 			border-right: 1px solid $pure-white;
@@ -270,81 +84,20 @@ body {
 			border-bottom: none;
 		}
 
-		//SHADOW HOVER + BIAŁA CZCIONKA
 		li:hover {
 			cursor: pointer;
-			// background-color: rgba(0, 0, 0, 0.7);
 			background-color: $pure-black;
 			color: $pure-white;
-			// mix-blend-mode: multiply;
 		}
-
-		// CZARNY HOVER + BIAŁA CZCIONKA
-		// li:hover {
-		// 	cursor: pointer;
-		// 	background-color: $pure-black;
-		// 	color: $pure-white;
-		// }
-
-		// CZARNY HOVER + BIAŁA CZCIONKA
-		// li:hover {
-		// 	cursor: pointer;
-		// 	background-color: $pure-white;
-		// 	color: $pure-black;
-		// }
 
 		a {
 			padding-left: 5rem;
-
-			// padding-left: 10rem;
-			// display: flex;
-			// align-items: center;
-
 			left: 10rem;
 			width: 100%;
 			height: 100%;
 			text-decoration: none;
 			color: $pure-white;
-			// background-color: red;
 		}
-	}
-}
-
-.burger-nav {
-	padding: 2rem;
-	background-color: $pure-white;
-	height: 100vh;
-	width: 100vw;
-	position: fixed;
-	right: 0;
-	z-index: 10;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	transform: translateX(100%);
-	transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
-
-	&--active {
-		transform: translateX(0);
-	}
-
-	&__container {
-		display: flex;
-		flex-direction: column;
-		text-align: right;
-	}
-
-	a {
-		margin: 0.5rem;
-		padding: 0.5rem;
-		font-size: 1.4rem;
-		text-decoration: none;
-		color: #000;
-		text-transform: uppercase;
-	}
-
-	a:hover {
-		font-weight: bold;
 	}
 }
 
@@ -360,6 +113,9 @@ body {
 				width: 100vh;
 				border-right: none;
 			}
+			a {
+				padding-left: 2rem;
+			}
 		}
 	}
 }
@@ -371,15 +127,6 @@ body {
 			}
 		}
 	}
-	.burger-nav {
-		width: 40vw;
-
-		a {
-			margin: 1rem;
-			padding: 1rem;
-			font-size: 1.8rem;
-		}
-	}
 }
 
 @media (min-width: 768px) {
@@ -389,19 +136,5 @@ body {
 				font-size: 5rem;
 			}
 		}
-	}
-	.burger-nav {
-		a {
-			margin: 1rem;
-			padding: 1rem;
-			font-size: 2.2rem;
-		}
-	}
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-	.burger-nav {
-		width: 20vw;
 	}
 }

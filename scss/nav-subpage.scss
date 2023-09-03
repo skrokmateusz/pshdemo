@@ -1,0 +1,18 @@
+@use './reset' as *;
+@use './colors' as *;
+@use './spinner' as *;
+@use './burger-button-black' as *;
+@use './burger-nav' as *;
+@use './logo-nav-black' as *;
+
+.container {
+	margin: 0 auto;
+    width: 90%;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+}

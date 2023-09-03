@@ -1,14 +1,5 @@
-const burgerButton = document.querySelector('.burger-btn');
-const burgerNav = document.querySelector('.burger-nav');
-const burgerIcon = document.querySelector('.burger-btn__bars');
 const imgElement = document.querySelector('.wrapper');
-
 const imageArray = document.querySelectorAll('.image');
-
-const navigationHandler = () => {
-	burgerNav.classList.toggle('burger-nav--active');
-	burgerIcon.classList.toggle('burger-btn__bars--active');
-};
 
 let index = 1;
 document.querySelector('.image1').classList.add('visible');
@@ -73,14 +64,5 @@ const lostHoverOnLiItem = e => {
 	}
 };
 
-const pageLoaderHandler = () => {
-	const spinnerContainer = document.querySelector('.spinner-container');
-	const spinner = document.querySelector('.spinner');
-	spinnerContainer.classList.add('spinner-container-hidden');
-	spinner.classList.add('spinner-hidden');
-};
-
-window.addEventListener('load', pageLoaderHandler);
-burgerButton.addEventListener('click', navigationHandler);
 document.body.addEventListener('mouseover', hoverOnLiItem);
 document.body.addEventListener('mouseleave', lostHoverOnLiItem);
