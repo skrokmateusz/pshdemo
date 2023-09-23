@@ -71,6 +71,31 @@ body {
     transform: scale(1);
   }
 }
+.logo-nav-white {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 11;
+  width: 4rem;
+  height: 4rem;
+  background-image: url("../img/logos/WT.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 576px) {
+  .logo-nav-white {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  .logo-nav-white {
+    width: 15rem;
+    height: 15rem;
+  }
+}
 .wrapper {
   scroll-snap-type: y mandatory;
   height: 100vh;

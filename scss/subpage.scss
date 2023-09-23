@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './reset' as *;
 @use './spinner' as *;
+@use './logo-nav-white' as *;
 
 .wrapper {
 	scroll-snap-type: y mandatory;

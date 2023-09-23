@@ -1,14 +1,16 @@
 @use './colors' as *;
 
 .burger-btn {
-	position: fixed;
-	right: 2rem;top: 2rem;
+	// position: fixed;
+	// right: 2rem;top: 2rem;
 	padding: 1em;
-	background: none;
+background: none;
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 11;
 	outline: none;
+	display: flex;
+	align-items: start;
 
 	&--active {
 		color: $pure-black;

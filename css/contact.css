@@ -1,0 +1,383 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+.spinner-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 12;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  transition: height 1s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+
+.spinner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+  text-align: center;
+  opacity: 1;
+}
+
+.spinner-container-hidden {
+  height: 0;
+}
+
+.spinner-hidden {
+  display: none;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+.logo-nav-black {
+  z-index: 11;
+  width: 8rem;
+  height: 8rem;
+  background-image: url("../img/logos/BT.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 576px) {
+  .logo-nav-black {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (min-width: 768px) {
+  .logo-nav-black {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+.burger-btn {
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 11;
+  outline: none;
+  display: flex;
+  align-items: start;
+}
+.burger-btn--active {
+  color: #000000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 2rem;
+  height: 1rem;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: "";
+  background-color: #000000;
+  transition: all 0.15s linear;
+}
+.burger-btn__bars::after {
+  top: 0.6rem;
+}
+.burger-btn__bars::before {
+  top: 1.2rem;
+}
+.burger-btn__bars--active {
+  top: 0.6rem;
+  transform: rotate(45deg);
+  background-color: #000000;
+}
+.burger-btn__bars--active::before {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: #000000;
+}
+.burger-btn__bars--active::after {
+  display: none;
+}
+
+.burger-nav {
+  padding: 2rem;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+.burger-nav--active {
+  transform: translateX(0);
+}
+.burger-nav__container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.burger-nav a {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.burger-nav a:hover {
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .burger-nav {
+    width: 40vw;
+  }
+  .burger-nav a {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .burger-nav a {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .burger-nav {
+    width: 20vw;
+  }
+}
+body {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.firm,
+.managers {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+.firm h2,
+.managers h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.firm h3,
+.managers h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+.firm i,
+.managers i {
+  font-size: 1.6rem;
+}
+.firm h4,
+.managers h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.firm .street,
+.firm .location,
+.firm .airport,
+.firm .highway,
+.managers .street,
+.managers .location,
+.managers .airport,
+.managers .highway {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+.firm .street span:last-child,
+.firm .location span:last-child,
+.firm .airport span:last-child,
+.firm .highway span:last-child,
+.managers .street span:last-child,
+.managers .location span:last-child,
+.managers .airport span:last-child,
+.managers .highway span:last-child {
+  position: absolute;
+  left: 30px;
+}
+.firm .ceo,
+.firm .cto,
+.firm .cfo,
+.managers .ceo,
+.managers .cto,
+.managers .cfo {
+  margin-bottom: 1.6rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+.firm .ceo .phone,
+.firm .cto .phone,
+.firm .cfo .phone,
+.managers .ceo .phone,
+.managers .cto .phone,
+.managers .cfo .phone {
+  margin-bottom: 1rem;
+}
+.firm .ceo span:last-child,
+.firm .cto span:last-child,
+.firm .cfo span:last-child,
+.managers .ceo span:last-child,
+.managers .cto span:last-child,
+.managers .cfo span:last-child {
+  position: absolute;
+  left: 30px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+}
+.map .iframe {
+  width: 90%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 576px) {
+  .firm,
+  .managers {
+    padding: 0 4rem;
+  }
+  .firm h2,
+  .managers h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .firm h3,
+  .managers h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .firm i,
+  .managers i {
+    font-size: 1.8rem;
+  }
+  .firm h4,
+  .managers h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .firm .street,
+  .firm .location,
+  .firm .airport,
+  .firm .highway,
+  .managers .street,
+  .managers .location,
+  .managers .airport,
+  .managers .highway {
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+  }
+  .firm .ceo,
+  .firm .cto,
+  .firm .cfo,
+  .managers .ceo,
+  .managers .cto,
+  .managers .cfo {
+    margin-bottom: 1.8rem;
+    font-size: 1.4rem;
+  }
+  .firm .ceo .phone,
+  .firm .cto .phone,
+  .firm .cfo .phone,
+  .managers .ceo .phone,
+  .managers .cto .phone,
+  .managers .cfo .phone {
+    margin-bottom: 1.2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .wrapper-contact {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .wrapper-contact .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper-contact .container .description {
+    width: 35%;
+  }
+  .wrapper-contact .container .map {
+    width: 65%;
+  }
+}/*# sourceMappingURL=contact.css.map */
