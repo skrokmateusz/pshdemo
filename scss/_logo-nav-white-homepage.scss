@@ -1,8 +1,10 @@
 .logo-nav-white {
 	position: fixed;
+	top: 1rem;
+	// left: 1rem;
 	z-index: 11;
-	width: 4rem;
-	height: 4rem;
+	width: 6rem;
+	height: 6rem;
 	background-image: url('../img/logos/WT.svg');
 	background-size: contain;
 	background-repeat: no-repeat;

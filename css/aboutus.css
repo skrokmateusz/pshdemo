@@ -226,10 +226,6 @@ a:hover {
   padding: 2rem 2rem 0 2rem;
 }
 
-.phone-paragraph:hover {
-  font-size: 16px;
-}
-
 .firm,
 .managers {
   padding: 0 2rem;
@@ -401,4 +397,4 @@ a:hover {
   .wrapper-contact .container .map {
     width: 65%;
   }
-}/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=aboutus.css.map */
