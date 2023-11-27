@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './reset' as *;
 @use './spinner' as *;
+@use './logo-nav-white' as *;
 
 .wrapper {
 	scroll-snap-type: y mandatory;
@@ -22,7 +23,7 @@
 		background-color: $pure-black;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: left;
 		color: $pure-white;
 
 		letter-spacing: 1px;
@@ -75,16 +76,48 @@
 	&__img {
 		height: 70vh;
 		background-size: cover;
-        background-position: center;
+		background-position: center;
 	}
 }
 
 .img-realization-1 {
-	background-image: url('../img/low/16\ realizacje_10_11zon.jpeg');
+	background-image: url('../img/low/realizations/Realizacja\ 1_2_11zon.jpeg');
 }
 
 .img-realization-2 {
-	background-image: url('../img/low/17\ realizacje_11_11zon.jpeg');
+	background-image: url('../img/low/realizations/Realizacja\ 2_1_11zon.jpeg');
+}
+
+.img-realization-3 {
+	background-image: url('../img/low/realizations/Realizacja\ 3_8_11zon.jpeg');
+}
+
+.img-realization-4 {
+	background-image: url('../img/low/realizations/Realizacja\ 4_7_11zon.jpg');
+}
+
+.img-realization-5 {
+	background-image: url('../img/low/realizations/Realizacje\ 5_1_11zon.jpg');
+}
+
+.img-realization-6 {
+	background-image: url('../img/low/realizations/Realizacja\ 6_6_11zon.jpg');
+}
+
+.img-realization-7 {
+	background-image: url('../img/low/realizations/Realizacja\ 7_5_11zon.jpeg');
+}
+
+.img-realization-8 {
+	background-image: url('../img/low/realizations/Realizacja\ 8_4_11zon.jpg');
+}
+
+.img-realization-9 {
+	background-image: url('../img/low/realizations/Realizacja\ 9_3_11zon.jpeg');
+}
+
+.img-realization-10 {
+	background-image: url('../img/low/realizations/Realizacja\ 10_2_11zon.jpeg');
 }
 
 .show {
@@ -147,14 +180,13 @@
 @media (min-width: 768px) {
 	.container {
 		display: flex;
-		flex-direction: row;
-		justify-content: center;
 
+		justify-content: center;
 
 		&__text {
 			width: 35vw;
-			height: 100vh; 
-        
+			height: 100vh;
+
 			&-right {
 				padding-right: 1rem;
 			}
@@ -178,9 +210,13 @@
 		}
 	}
 
-    .container:last-child {
-        flex-direction: row-reverse;
-    }
+	.left {
+		flex-direction: row-reverse;
+	}
+
+	.right {
+		flex-direction: row;
+	}
 }
 
 @media (min-width: 992px) {

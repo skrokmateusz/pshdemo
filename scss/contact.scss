@@ -29,7 +29,6 @@ a:hover {
 
 .phone-paragraph:hover {
 	font-size: 16px;
-	
 }
 
 .firm,
@@ -100,6 +99,21 @@ a:hover {
 	}
 }
 
+.footer {
+	margin-top: 3rem;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
+	line-height: 3rem;
+
+	.text {
+		border-top: 1px solid #ccc;
+		text-align: center;
+	}
+}
+
 @media (min-width: 576px) {
 	.firm,
 	.managers {
@@ -161,11 +175,19 @@ a:hover {
 			}
 		}
 	}
+
+	.footer {
+		font-size: 1.4rem;
+		.text {
+			padding-top: 2rem;
+			width: 75%;
+		}
+	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 	.wrapper-contact {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: 0 auto;
 
 		.container {

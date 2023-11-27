@@ -72,8 +72,8 @@ body {
 }
 .logo-nav-black {
   z-index: 11;
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
   background-image: url("../img/logos/BT.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -82,14 +82,14 @@ body {
 
 @media (min-width: 576px) {
   .logo-nav-black {
-    width: 15rem;
-    height: 15rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 @media (min-width: 768px) {
   .logo-nav-black {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
   }
 }
 .burger-btn {
@@ -208,16 +208,6 @@ body {
   margin: 0 auto;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -226,81 +216,19 @@ a:hover {
   padding: 2rem 2rem 0 2rem;
 }
 
-.firm,
-.managers {
+.firm {
   padding: 0 2rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
-.firm h2,
-.managers h2 {
+.firm h2 {
   font-size: 2.2rem;
   margin-bottom: 1.4rem;
   font-weight: 600;
   text-decoration: underline;
 }
-.firm h3,
-.managers h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1.4rem;
-}
-.firm i,
-.managers i {
-  font-size: 1.6rem;
-}
-.firm h4,
-.managers h4 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-.firm .street,
-.firm .location,
-.firm .airport,
-.firm .highway,
-.managers .street,
-.managers .location,
-.managers .airport,
-.managers .highway {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  position: relative;
-}
-.firm .street span:last-child,
-.firm .location span:last-child,
-.firm .airport span:last-child,
-.firm .highway span:last-child,
-.managers .street span:last-child,
-.managers .location span:last-child,
-.managers .airport span:last-child,
-.managers .highway span:last-child {
-  position: absolute;
-  left: 30px;
-}
-.firm .ceo,
-.firm .cto,
-.firm .cfo,
-.managers .ceo,
-.managers .cto,
-.managers .cfo {
-  margin-bottom: 1.6rem;
-  font-size: 1.2rem;
-  position: relative;
-}
-.firm .ceo .phone,
-.firm .cto .phone,
-.firm .cfo .phone,
-.managers .ceo .phone,
-.managers .cto .phone,
-.managers .cfo .phone {
-  margin-bottom: 1rem;
-}
-.firm .ceo span:last-child,
-.firm .cto span:last-child,
-.firm .cfo span:last-child,
-.managers .ceo span:last-child,
-.managers .cto span:last-child,
-.managers .cfo span:last-child {
-  position: absolute;
-  left: 30px;
+.firm p {
+  text-align: justify;
 }
 
 .map {
@@ -308,62 +236,28 @@ a:hover {
   justify-content: center;
   margin-bottom: 2rem;
 }
-.map .iframe {
+.map img {
   width: 90%;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 576px) {
-  .firm,
-  .managers {
+  .firm {
     padding: 0 4rem;
   }
-  .firm h2,
-  .managers h2 {
+  .firm h2 {
     font-size: 2.4rem;
     margin-bottom: 1.6rem;
   }
-  .firm h3,
-  .managers h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.6rem;
-  }
-  .firm i,
-  .managers i {
-    font-size: 1.8rem;
-  }
-  .firm h4,
-  .managers h4 {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-  }
-  .firm .street,
-  .firm .location,
-  .firm .airport,
-  .firm .highway,
-  .managers .street,
-  .managers .location,
-  .managers .airport,
-  .managers .highway {
-    margin-bottom: 1.2rem;
+  .firm p {
     font-size: 1.4rem;
   }
-  .firm .ceo,
-  .firm .cto,
-  .firm .cfo,
-  .managers .ceo,
-  .managers .cto,
-  .managers .cfo {
-    margin-bottom: 1.8rem;
-    font-size: 1.4rem;
+  .map {
+    height: 45rem;
   }
-  .firm .ceo .phone,
-  .firm .cto .phone,
-  .firm .cfo .phone,
-  .managers .ceo .phone,
-  .managers .cto .phone,
-  .managers .cfo .phone {
-    margin-bottom: 1.2rem;
+  .map img {
+    width: 90%;
+    background-size: cover;
   }
 }
 @media (min-width: 1000px) {
@@ -376,25 +270,24 @@ a:hover {
     justify-content: space-between;
   }
   .wrapper-contact .container .description {
-    width: 35%;
+    width: 50%;
   }
   .wrapper-contact .container .map {
-    width: 65%;
+    width: 50%;
+  }
+  .wrapper-contact .container .firm p {
+    font-size: 1.6rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .wrapper-contact {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
   }
   .wrapper-contact .container {
     display: flex;
-    justify-content: space-between;
   }
-  .wrapper-contact .container .description {
-    width: 35%;
-  }
-  .wrapper-contact .container .map {
-    width: 65%;
+  .map {
+    height: 63rem;
   }
 }/*# sourceMappingURL=aboutus.css.map */

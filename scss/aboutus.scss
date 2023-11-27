@@ -9,16 +9,6 @@ body {
 	margin: 0 auto;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-a:hover {
-	cursor: pointer;
-	text-decoration: underline;
-}
-
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -27,61 +17,19 @@ a:hover {
 	padding: 2rem 2rem 0 2rem;
 }
 
-.firm,
-.managers {
+.firm {
 	padding: 0 2rem;
 	margin-bottom: 3rem;
+    width: 100%;
 	h2 {
 		font-size: 2.2rem;
 		margin-bottom: 1.4rem;
 		font-weight: 600;
 		text-decoration: underline;
 	}
-
-	h3 {
-		font-size: 1.6rem;
-		margin-bottom: 1.4rem;
-	}
-
-	i {
-		font-size: 1.6rem;
-	}
-
-	h4 {
-		font-size: 1.4rem;
-		margin-bottom: 1rem;
-	}
-
-	.street,
-	.location,
-	.airport,
-	.highway {
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
-		position: relative;
-
-		span:last-child {
-			position: absolute;
-			left: 30px;
-		}
-	}
-
-	.ceo,
-	.cto,
-	.cfo {
-		margin-bottom: 1.6rem;
-		font-size: 1.2rem;
-		position: relative;
-
-		.phone {
-			margin-bottom: 1rem;
-		}
-
-		span:last-child {
-			position: absolute;
-			left: 30px;
-		}
-	}
+    p {
+        text-align: justify;
+    }
 }
 
 .map {
@@ -89,54 +37,30 @@ a:hover {
 	justify-content: center;
 	margin-bottom: 2rem;
 
-	.iframe {
+	img {
 		width: 90%;
 		box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 	}
 }
 
 @media (min-width: 576px) {
-	.firm,
-	.managers {
+	.firm {
 		padding: 0 4rem;
 		h2 {
 			font-size: 2.4rem;
 			margin-bottom: 1.6rem;
 		}
-
-		h3 {
-			font-size: 1.8rem;
-			margin-bottom: 1.6rem;
-		}
-
-		i {
-			font-size: 1.8rem;
-		}
-
-		h4 {
-			font-size: 1.6rem;
-			margin-bottom: 1.2rem;
-		}
-
-		.street,
-		.location,
-		.airport,
-		.highway {
-			margin-bottom: 1.2rem;
+		p {
 			font-size: 1.4rem;
-		}
-
-		.ceo,
-		.cto,
-		.cfo {
-			margin-bottom: 1.8rem;
-			font-size: 1.4rem;
-
-			.phone {
-				margin-bottom: 1.2rem;
-			}
 		}
 	}
+    .map {
+        height: 45rem;
+           img {
+               width: 90%;
+               background-size: cover;
+           }
+       }
 }
 
 @media (min-width: 1000px) {
@@ -148,31 +72,38 @@ a:hover {
 			display: flex;
 			justify-content: space-between;
 			.description {
-				width: 35%;
+				width: 50%;
 			}
 
 			.map {
-				width: 65%;
+				width: 50%;
 			}
+
+            .firm {
+              
+                p {
+                    font-size: 1.6rem;
+                }
+            }
 		}
 	}
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 	.wrapper-contact {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: 0 auto;
 
 		.container {
 			display: flex;
-			justify-content: space-between;
-			.description {
-				width: 35%;
-			}
-
-			.map {
-				width: 65%;
-			}
+		
+	
 		}
 	}
+
+    .map {
+     height: 63rem;
+    
+    }
 }
