@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/subpage.css">
-    <script defer src="./js/subpage.js"></script>
+   
 </head>
 
 <body>
@@ -35,9 +35,23 @@
                 <div class="burger-btn__bars"></div>
             </div>
         </button>
+        <nav class="burger-nav">
+
+            <div class="burger-nav__container">
+                <a href="./aboutus.html" class="nav__item">o nas</a>
+                <a href="./partners.html" class="nav__item">partnerzy</a>
+                <!-- <a href="./suppliers.html" class="nav__item">dostawcy</a>
+                <a href="./oferts.html" class="nav__item">oferta</a>
+                <a href="./workwithus.html" class="nav__item">praca u nas</a>
+                <a href="./download.html" class="nav__item">do pobrania</a> -->
+            </div>
+        </nav>
         <div class="container">
+            <div class="container__img img-plain-roof">
+
+            </div>
             <div class="container__text">
-                <div class="container__text--left">
+                <div class="container__text-left">
                     <h3>dachy płaskie</h3>
                     <div class="underline"></div>
                     <p>
@@ -56,16 +70,14 @@
                         PSH Sp. z o.o. realizuje zadania dla klientów komercyjnych i indywidualnych. Dla zrealizowanych
                         przez nas obiektów zapewniamy serwis gwarancyjny i pogwarancyjny.
                     </p>
-                    <button>kontakt</button>
+                    <button><a href="contact.html">skontaktuj się z nami</a></button>
                 </div>
             </div>
 
-            <div class="container__img img-plain-roof">
-                <!-- <img class='' src="./img/dron na strone/AGH HALA (1).jpeg" alt=""> -->
-            </div>
+
         </div>
 
-        <div class="container">
+        <div class="container right">
             <div class="container__img img-homes-buildings"></div>
             <div class="container__text">
                 <div class="container__text-right">
@@ -87,6 +99,7 @@
 
         </div>
         <div class="container">
+            <div id="three" class="container__img img-services"></div>
             <div class="container__text">
                 <div class="container__text--left">
                     <h3>budownictwo usługowe, użyteczności publicznej</h3>
@@ -110,9 +123,9 @@
                 </div>
             </div>
 
-            <div id="three" class="container__img img-services"></div>
+
         </div>
-        <div class="container">
+        <div class="container right">
             <div id="four" class="container__img img-industry"></div>
             <div class="container__text">
                 <div class="container__text-right">
@@ -134,7 +147,8 @@
         </div>
     </div>
 
-
+    <script src="./js/subpage.js"></script>
+    <script src="./js/burger-btn.js"></script>
 
 </body>
 

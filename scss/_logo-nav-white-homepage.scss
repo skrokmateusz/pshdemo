@@ -1,7 +1,6 @@
 .logo-nav-white {
 	position: fixed;
 	top: 1rem;
-	// left: 1rem;
 	z-index: 11;
 	width: 6rem;
 	height: 6rem;
@@ -13,14 +12,14 @@
 
 @media (min-width: 576px) {
 	.logo-nav-white {
-		width: 15rem;
-		height: 15rem;
+		width: 10rem;
+		height: 10rem;
 	}
 }
 
 @media (min-width: 768px) {
 	.logo-nav-white {
-		width: 20rem;
-		height: 20rem;
+		width: 13rem;
+		height: 13rem;
 	}
 }

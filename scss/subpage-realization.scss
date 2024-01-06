@@ -2,6 +2,8 @@
 @use './reset' as *;
 @use './spinner' as *;
 @use './logo-nav-white' as *;
+@use './burger-button-white-subpage' as *;
+@use './burger-nav' as *;
 
 .wrapper {
 	scroll-snap-type: y mandatory;
@@ -242,6 +244,7 @@
 		&__text {
 			width: 30%;
 			height: 100%;
+			padding: 4rem;
 		}
 
 		&__img {

@@ -17,6 +17,11 @@ body {
   background-color: #fff;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .spinner-container {
   position: absolute;
   height: 100%;
@@ -198,14 +203,14 @@ body {
 
 @media (min-width: 576px) {
   .logo-nav-white {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
   }
 }
 @media (min-width: 768px) {
   .logo-nav-white {
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
   }
 }
 .image {
@@ -218,6 +223,15 @@ body {
   transition: opacity ease 1s;
   background-size: cover;
   background-position: center;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.35;
+  height: 100vh;
+  width: 100vw;
 }
 
 .image1 {
@@ -290,8 +304,9 @@ body {
   color: #fff;
 }
 .nav__container a {
-  padding-left: 5rem;
-  left: 10rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  left: 15rem;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -307,9 +322,6 @@ body {
     width: 100vh;
     border-right: none;
   }
-  .nav__container a {
-    padding-left: 2rem;
-  }
 }
 @media (min-width: 576px) {
   .nav__container li {
@@ -319,5 +331,9 @@ body {
 @media (min-width: 768px) {
   .nav__container li {
     font-size: 5rem;
+  }
+  .nav__container a {
+    padding-top: 3rem;
+    padding-left: 4rem;
   }
 }/*# sourceMappingURL=main.css.map */

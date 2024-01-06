@@ -1,0 +1,71 @@
+@use './colors' as *;
+
+.burger-btn {
+	position: fixed;
+	top: 2rem;
+	right: 5rem;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 11;
+	outline: none;
+
+	&--active {
+		color: $pure-black;
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 2rem;
+		height: 1rem;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		height: 3px;
+		content: '';
+		background-color: $pure-white;
+		transition: all 0.15s linear;
+	}
+	&__bars {
+		&::after {
+			top: 0.6rem;
+		}
+
+		&::before {
+			top: 1.2rem;
+		}
+	}
+
+	&__bars--active {
+		top: 0.6rem;
+		transform: rotate(45deg);
+		background-color: $pure-black;
+	}
+	&__bars--active::before {
+		top: 0;
+		transform: rotate(90deg);
+		background-color: $pure-black;
+	}
+	&__bars--active::after {
+		display: none;
+	}
+}
