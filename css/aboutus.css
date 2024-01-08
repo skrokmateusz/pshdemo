@@ -293,6 +293,14 @@ body {
     display: flex;
   }
   .map {
+    width: 100%;
     height: 63rem;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .map .about-us {
+    height: 100%;
+    width: auto;
+    background-size: cover;
   }
 }/*# sourceMappingURL=aboutus.css.map */
